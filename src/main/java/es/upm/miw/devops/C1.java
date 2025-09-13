@@ -6,4 +6,8 @@ public class C1 {
         // Issue#4
     }
 
+    public void method1(int x) {
+        // Issue#5
+    }
+
 }
