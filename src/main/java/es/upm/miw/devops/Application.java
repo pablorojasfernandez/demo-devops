@@ -11,6 +11,7 @@ public class Application {
     // Issue 2 - Commit 2
     // Issue 3 - Commit 1
     // Issue 6 - Commit 1
+    // Issue 7 - Commit 1
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);// mvn clean spring-boot:run
     }
