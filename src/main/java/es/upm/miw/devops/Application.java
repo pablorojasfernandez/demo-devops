@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConf
 @SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class}) // Not API: /error
 public class Application {
     // Commit 4
+    // Issue 2 - Commit 4
     // Issue 2 - Commit 2
     // Issue 3 - Commit 1
     public static void main(String[] args) {
