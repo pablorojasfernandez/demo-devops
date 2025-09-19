@@ -35,4 +35,3 @@ CMD ["java", "-jar", "app.jar"]
 
 # Arranca el contenedor
 #> docker start devops1
-
