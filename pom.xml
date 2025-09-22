@@ -57,6 +57,9 @@
         <sonar-maven-plugin-version>5.2.0.4988</sonar-maven-plugin-version>
         <!-- OpenAPI -->
         <springdoc-openapi-starter-webmvc-ui.version>2.8.11</springdoc-openapi-starter-webmvc-ui.version>
+        <sonar.coverage.jacoco.xmlReportPaths>
+            ${project.build.directory}/site/jacoco/jacoco.xml
+        </sonar.coverage.jacoco.xmlReportPaths>
         <sonar.organization>pablorojasfernandez</sonar.organization>
     </properties>
 

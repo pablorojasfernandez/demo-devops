@@ -11,8 +11,6 @@ import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.*;
 
-@SpringBootTest
-@ActiveProfiles("test")
 class UserTest {
 
     private User user;
