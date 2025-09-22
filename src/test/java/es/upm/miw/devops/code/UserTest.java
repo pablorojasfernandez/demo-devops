@@ -2,6 +2,7 @@ package es.upm.miw.devops.code;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,6 +10,7 @@ import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.*;
 
+@ActiveProfiles("test")
 class UserTest {
 
     private User user;
