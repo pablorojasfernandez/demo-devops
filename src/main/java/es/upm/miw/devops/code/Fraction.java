@@ -29,6 +29,9 @@ public class Fraction {
     private int denominator;
 
     public Fraction(int numerator, int denominator) {
+        if (denominator == 0) {
+            throw new IllegalArgumentException("Denominator cannot be zero");
+        }
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -50,6 +53,9 @@ public class Fraction {
     }
 
     public void setDenominator(int denominator) {
+        if (denominator == 0) {
+            throw new IllegalArgumentException("Denominator cannot be zero");
+        }
         this.denominator = denominator;
     }
 
@@ -65,25 +71,31 @@ public class Fraction {
         return Math.abs(this.numerator) >= Math.abs(this.denominator);
     }
 
-    public boolean isEquivalent(Fraction fraction) {
-        return this.numerator * fraction.getDenominator() == this.denominator * fraction.getNumerator();
+    public boolean isEquivalent(Fraction equivalentFraction) {
+        return this.numerator * equivalentFraction.getDenominator() == this.denominator * equivalentFraction.getNumerator();
     }
 
-    public Fraction add(Fraction other) {
-        int commonDenominator = this.denominator * other.getDenominator();
-        int newNumerator = this.numerator * other.getDenominator() + other.getNumerator() * this.denominator;
+    public Fraction add(Fraction fractionToAdd) {
+        int commonDenominator = this.denominator * fractionToAdd.getDenominator();
+        int newNumerator = this.numerator * fractionToAdd.getDenominator() + fractionToAdd.getNumerator() * this.denominator;
         return new Fraction(newNumerator, commonDenominator);
     }
 
-    public Fraction multiply(Fraction other) {
-        return new Fraction(this.numerator * other.getNumerator(), this.denominator * other.getDenominator());
+    public Fraction multiply(Fraction fractionToMultiply) {
+        return new Fraction(
+                this.numerator * fractionToMultiply.getNumerator(),
+                this.denominator * fractionToMultiply.getDenominator()
+        );
     }
 
-    public Fraction divide(Fraction other) {
-        if (other.getNumerator() == 0) {
+    public Fraction divide(Fraction fractionToDivide) {
+        if (fractionToDivide.getNumerator() == 0) {
             throw new ArithmeticException("Cannot divide by a fraction with numerator 0");
         }
-        return new Fraction(this.numerator * other.getDenominator(), this.denominator * other.getNumerator());
+        return new Fraction(
+                this.numerator * fractionToDivide.getDenominator(),
+                this.denominator * fractionToDivide.getNumerator()
+        );
     }
 
     @Override

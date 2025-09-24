@@ -1,9 +1,9 @@
 package es.upm.miw.devops.code;
 
+import es.upm.miw.devops.code.Fraction;
+import es.upm.miw.devops.code.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
 import java.util.ArrayList;
 import java.util.Arrays;
